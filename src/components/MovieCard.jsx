@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom"
 
+
 const MovieCard = () => {
     return (
+
         <div className="card img-fluid mb-4 " >
             <img className="card-img-top" src="http://localhost:3000/imgs/movies/inception.jpg" />
             <div className="card-body">
@@ -11,6 +13,9 @@ const MovieCard = () => {
                 <Link className="btn btn-primary" to="movies/1">See more</Link>
             </div>
         </div>
+
+
+
     )
 }
 
