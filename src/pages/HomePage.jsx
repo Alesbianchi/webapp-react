@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const HomePage = () => {
     return (
         <>
-            <h1 className="text-primary">BoolFlix</h1>
+            <h1 className="text-primary mt-3">BoolFlix</h1>
             <h2 className="text-light"><i>the nerdest movie community</i></h2>
 
 

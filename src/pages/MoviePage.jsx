@@ -30,7 +30,7 @@ const MoviePage = () => {
 
             </section>
             <footer className="d-flex justify-content-end p-2 m-2">
-                <Link className="btn btn-primary btn-lg" to="/">Torna alla Home</Link>
+                <Link className="btn btn-outline-primary btn-lg mb-5" to="/">Torna alla Home</Link>
             </footer>
 
         </>

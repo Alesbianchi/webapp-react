@@ -10,7 +10,7 @@ const MovieCard = () => {
                 <h5 className="card-title">Titolo del film</h5>
                 <p className="card-text">Nome Autore</p>
                 <p className="card-text">breve descrizione</p>
-                <Link className="btn btn-primary" to="movies/1">See more</Link>
+                <Link className="btn btn-outline-primary" to="movies/1">See more</Link>
             </div>
         </div>
 

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 
 const Header = () => {
     return (
-        <nav className="navbar bg-body-tertiary">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/">BOOLFLIX</Link>
+        <nav className="navbar  bg-dark">
+            <div className="container-fluid bg-dark ms-2">
+                <Link className="navbar-brand text-led" to="/">BOOLFLIX</Link>
             </div>
         </nav>
 
