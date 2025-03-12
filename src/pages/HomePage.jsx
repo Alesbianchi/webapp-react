@@ -1,18 +1,27 @@
-//importo il componente moviecard
-import MovieCard from "./../components/MovieCard"
+
 
 //importo axios
 import axios from "axios"
 
-import { Link } from "react-router-dom"
+//importo usestate e useeffect
+import { useState, useEffect } from "react"
+
+// import { Link } from "react-router-dom"
+
+//importo il componente moviecard
+import MovieCard from "./../components/MovieCard"
 
 const HomePage = () => {
+
+    // setto lo stato del componente
+    const [movies, setMovies] = useState([]);
 
     const fetchMovies = () => {
         axios.get("http://localhost:3000/api/movies")
             .then(
                 res => {
-                    console.log(res.data);
+                    //console.log(res.data);
+                    setMovies(res.data)
 
                 }
             )
@@ -20,7 +29,20 @@ const HomePage = () => {
             )
 
     }
-    fetchMovies();
+    useEffect(fetchMovies, []);
+
+    const renderMovie = () => {
+        return movies.map(
+            movie => {
+                return (
+                    <div className="col" key={movie.id}>
+                        <MovieCard />
+                    </div>
+                )
+            }
+        )
+
+    }
 
     return (
         <>
@@ -29,14 +51,7 @@ const HomePage = () => {
 
 
             <div className="row row-cols-4 mt-4 g-3">
-                <div className="col"> <MovieCard /> </div>
-                <div className="col"> <MovieCard /> </div>
-                <div className="col"> <MovieCard /> </div>
-                <div className="col"> <MovieCard /> </div>
-                <div className="col"> <MovieCard /> </div>
-                <div className="col"> <MovieCard /> </div>
-                <div className="col"> <MovieCard /> </div>
-                <div className="col"> <MovieCard /> </div>
+                {renderMovie()}
             </div>
 
         </>
