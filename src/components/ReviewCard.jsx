@@ -1,11 +1,12 @@
-const ReviewCard = () => {
+const ReviewCard = ({ reviewProp }) => {
+    const { text, vote, name } = reviewProp
     return (
 
         <div className="card mb-4 blue-shadow">
             <div className="card-body">
-                <p>An absolute masterpiece, beautifully written.</p>
-                <p><strong>Vote</strong> ⭐⭐⭐⭐⭐</p>
-                <p className="text-muted"><em>By Alice</em></p>
+                <p>{text}</p>
+                <p><strong>Vote</strong> {vote}</p>
+                <p className="text-muted"><em>By {name}</em></p>
             </div>
         </div>
     )

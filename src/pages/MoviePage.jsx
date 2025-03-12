@@ -34,6 +34,14 @@ const MoviePage = () => {
     }
     useEffect(fetchMovie, []);
 
+    //funzione per restituire le review
+    const renderReviews = () => {
+        return movie.reviews?.map(
+            review => <ReviewCard key={review.id} reviewProp={review} />
+
+        )
+
+    }
 
     return (
         <>
@@ -52,10 +60,7 @@ const MoviePage = () => {
                     <h4 className="text-light">Our community reviews</h4>
                 </div>
 
-                <ReviewCard />
-                <ReviewCard />
-                <ReviewCard />
-                <ReviewCard />
+                {renderReviews()}
 
             </section>
             <footer className="d-flex justify-content-end p-2 m-2">
