@@ -11,7 +11,7 @@ const MovieCard = ({ movieProp }) => {
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">By {director}</p>
                 <p className="card-text">{abstract}</p>
-                <Link to={'movies/${id}'} className="btn btn-outline-primary" >See more</Link>
+                <Link to={`movies/${id}`} className="btn btn-outline-primary" >See more</Link>
             </div>
         </div>
 
