@@ -6,10 +6,10 @@ const MovieCard = ({ movieProp }) => {
     return (
 
         <div className="card img-fluid mb-4 p-3 mb-5 bg-body-tertiary rounded blue-shadow" >
-            <img className="card-img-top" src={image} alt={title} />
+            {image && <img className="card-img-top" src={image} alt={title} />}
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
-                <p className="card-text">By {director}</p>
+                <p className="card-text">By {director || 'Anonymous'}</p>
                 <p className="card-text">{abstract}</p>
                 <Link to={`movies/${id}`} className="btn btn-outline-primary" >See more</Link>
             </div>

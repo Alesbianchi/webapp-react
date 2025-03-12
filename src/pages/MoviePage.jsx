@@ -5,7 +5,7 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 
 //importo parde del link del modulo react-router
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
 
 //importo il componente delle recensioni
 import ReviewCard from "./../components/ReviewCard"
@@ -15,6 +15,9 @@ const MoviePage = () => {
 
     //recupero l'id del film richiesto
     const { id } = useParams();
+
+    // utilizzo per il redirect
+    const redirect = uneNavigate();
 
     //setto lo stato del componente
     const [movie, setMovie] = useState({});
@@ -28,7 +31,10 @@ const MoviePage = () => {
 
                 }
             )
-            .catch(err => console.log(err)
+            .catch(err => {
+                console.log(err)
+                if (err.status === 404) redirect("/*")
+            }
             )
 
     }

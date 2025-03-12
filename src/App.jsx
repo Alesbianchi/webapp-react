@@ -9,6 +9,9 @@ import MoviePage from './pages/MoviePage'
 //importo il layout
 import DefaultLayout from './layouts/DefaultLayout'
 
+//importo la pagina not found
+import NotFoundPage from './pages/NotFoundPage'
+
 //importo react router per gestire le rotte
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
@@ -24,6 +27,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route index path="/" element={<HomePage />} />
             <Route path="/movies/:id" element={<MoviePage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
