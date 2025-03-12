@@ -36,7 +36,7 @@ const HomePage = () => {
             movie => {
                 return (
                     <div className="col" key={movie.id}>
-                        <MovieCard />
+                        <MovieCard movieProp={movie} />
                     </div>
                 )
             }
