@@ -10,6 +10,10 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 //importo il componente delle recensioni
 import ReviewCard from "./../components/ReviewCard"
 
+//importo il componente del form delle recensioni
+import ReviewForm from "./../components/ReviewForm"
+
+
 
 const MoviePage = () => {
 
@@ -17,7 +21,7 @@ const MoviePage = () => {
     const { id } = useParams();
 
     // utilizzo per il redirect
-    const redirect = uneNavigate();
+    const redirect = useNavigate();
 
     //setto lo stato del componente
     const [movie, setMovie] = useState({});
@@ -69,6 +73,12 @@ const MoviePage = () => {
                 {renderReviews()}
 
             </section>
+
+            <section>
+                <ReviewForm />
+            </section>
+
+
             <footer className="d-flex justify-content-end p-2 m-2">
                 <Link className="btn btn-outline-primary btn-lg mb-5" to="/">Torna alla Home</Link>
             </footer>
