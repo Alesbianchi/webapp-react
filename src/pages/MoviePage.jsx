@@ -75,7 +75,7 @@ const MoviePage = () => {
             </section>
 
             <section>
-                <ReviewForm />
+                <ReviewForm movie_id={movie.id} reloadReviews={fetchMovie} />
             </section>
 
 
