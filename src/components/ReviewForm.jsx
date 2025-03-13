@@ -43,20 +43,20 @@ const ReviewForm = ({ movie_id, reloadReviews }) => {
             <form onSubmit={submitReview}>
                 <div className="mb-3 text-white">
                     <label htmlFor="name" className="form-label" ></label>
-                    <input type="text" className="form-control" id="name" name="name" value={formData.name || ""} onChange={setFieldValue} required />
+                    <input type="text" className="form-control" id="name" name="name" placeholder="Inserisci il nome" value={formData.name || ""} onChange={setFieldValue} required />
                 </div>
 
                 <div className="mb-3 text-white">
                     <label htmlFor="rating" className="form-label" ></label>
-                    <input type="number" className="form-control" id="rating" name="vote" min="1" max="5" value={formData.vote || 1} onChange={setFieldValue} required />
+                    <input type="number" className="form-control" id="rating" name="vote" min="1" max="5" placeholder="Inserisci un voto da 1 a 5" value={formData.vote || 1} onChange={setFieldValue} required />
                 </div>
 
                 <div className="mb-3 text-white">
                     <label htmlFor="description" className="form-label" ></label>
-                    <textarea className="form-control" id="description" name="text" rows="3" value={formData.text || ""} onChange={setFieldValue} required></textarea>
+                    <textarea className="form-control" id="description" name="text" rows="3" placeholder="Inserisci una breve descrizione" value={formData.text || ""} onChange={setFieldValue} required></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary" >Invia</button>
+                <button type="submit" className="btn btn-outline-primary" >Invia</button>
             </form>
         </div>
 

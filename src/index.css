@@ -10,12 +10,17 @@
 
 
 .blue-shadow {
+    /* box-shadow: 0px 0px 15px 4px rgba(0, 166, 255, 0.8); */
+}
+
+.blue-shadow-card:hover {
     box-shadow: 0px 0px 15px 4px rgba(0, 166, 255, 0.8);
+    transform: scale(1.03);
+    transition: 0.3s;
 }
 
 .text-led {
     color: #0066ff;
-    /* Blu più saturo e vibrante */
     text-shadow: 0 0 8px #3399ff, 0 0 16px #005bbb;
 }
 
