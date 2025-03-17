@@ -9,7 +9,9 @@ const initialData = {
     director: "",
     abstract: "",
     image: null
-}
+};
+
+const endpointApi = "http://localhost:3000/api/movies";
 
 
 const CreateMoviePage = () => {
@@ -25,7 +27,15 @@ const CreateMoviePage = () => {
         else setFormDataOgj({ ...formDataOgj, [name]: value });
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios.post(endpointApi, formDataOgj, { headers: { "Content-Type": "multipart/form-data" } })
+            .then(
+                () => { navigate("/") }
+            )
+            .catch((err) => {
+                console.log(err);
+            });
 
     }
 
